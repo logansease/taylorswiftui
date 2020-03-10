@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 struct Album: Identifiable {
-    var id = UUID()
+    var id: String = UUID().uuidString
     var name: String
     var externalImageUrl: String?
     var date: Date?
@@ -25,9 +25,9 @@ struct Album: Identifiable {
         self.name = name.capitalized
         self.date = itunesAlbum.releaseDate
         self.externalImageUrl = itunesAlbum.artworkUrl100
-        if let collectionId = itunesAlbum.collectionId,
-            let uuid = UUID(uuidString: "\(collectionId)") {
-            id = uuid
+
+        if let collectionId = itunesAlbum.collectionId {
+            self.id = "\(collectionId)"
         }
     }
     
