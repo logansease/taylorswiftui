@@ -19,9 +19,9 @@ struct AlbumListView: View {
                     Text(album.name)
                 }
             }
-            .onAppear() {
-                DataService.shared.loadAlbums()
-            }
+        }
+        .onAppear() {
+            DataService.shared.loadAlbums()
         }
     }
 }

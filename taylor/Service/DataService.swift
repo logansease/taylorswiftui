@@ -10,6 +10,7 @@ import Foundation
 
 class DataService: ObservableObject  {
     
+    var jsonDecoder = JSONDecoder()
     @Published var albums: [Album] = []
     
     class var shared: DataService {
@@ -19,19 +20,39 @@ class DataService: ObservableObject  {
         return Singleton.instance
     }
     
+    init() {
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+//        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+//        jsonDecoder.dateDecodingStrategy = .formatted(dateFormatter)
+        // jsonDecoder.dateDecodingStrategy = .iso8601
+        jsonDecoder.dateDecodingStrategy = .custom { decoder in
+            let dateString = try decoder.singleValueContainer().decode(String.self)
+            let dateFormatter = DateFormatter()
+            dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+            let date = dateFormatter.date(from: dateString) ?? Date()
+            return date
+        }
+    }
+    
     func loadAlbums() {
-        var result: [Album] = []
-
-        result.append(Album(name: "Lover"))
-        result.append(Album(name: "Reputation"))
-        result.append(Album(name: "1989"))
-        result.append(Album(name: "Red"))
-        result.append(Album(name: "Speak Now"))
-        result.append(Album(name: "Fearless"))
         
-        // TODO: Make network call
+        guard let url = URL(string: "https://itunes.apple.com/lookup?id=159260351&entity=album") else {
+            return
+        }
         
-        self.albums = result
+        let request = URLRequest(url: url)
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            if let data = data,
+                let decodedResponse = try? self.jsonDecoder.decode(ItunesAlbumResult.self, from: data)
+            {
+                DispatchQueue.main.async {
+                    self.albums = decodedResponse.results.toAlbums()
+                }
+            }
+            
+        }.resume()
     }
     
 }
