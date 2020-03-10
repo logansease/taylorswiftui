@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		006B91C224170C21003BCBBA /* ItunesAlbumResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006B91C124170C21003BCBBA /* ItunesAlbumResult.swift */; };
 		007C48352410B55D004C2C02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C48342410B55D004C2C02 /* AppDelegate.swift */; };
 		007C48372410B55D004C2C02 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C48362410B55D004C2C02 /* SceneDelegate.swift */; };
 		007C48392410B55D004C2C02 /* AlbumListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C48382410B55D004C2C02 /* AlbumListView.swift */; };
@@ -18,6 +19,7 @@
 		007C48652410BC5C004C2C02 /* AlbumDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C48642410BC5C004C2C02 /* AlbumDetailView.swift */; };
 		007C487D24119B7A004C2C02 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C487C24119B7A004C2C02 /* Album.swift */; };
 		007C488024119D7C004C2C02 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C487F24119D7C004C2C02 /* DataService.swift */; };
+		00EAAB9C2414A79300B59C4E /* ItunesAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EAAB9B2414A79300B59C4E /* ItunesAlbum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		006B91C124170C21003BCBBA /* ItunesAlbumResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesAlbumResult.swift; sourceTree = "<group>"; };
 		007C48312410B55D004C2C02 /* taylor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = taylor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		007C48342410B55D004C2C02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		007C48362410B55D004C2C02 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +58,7 @@
 		007C48642410BC5C004C2C02 /* AlbumDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailView.swift; sourceTree = "<group>"; };
 		007C487C24119B7A004C2C02 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		007C487F24119D7C004C2C02 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		00EAAB9B2414A79300B59C4E /* ItunesAlbum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesAlbum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,7 @@
 				007C484A2410B55F004C2C02 /* taylorTests */,
 				007C48552410B560004C2C02 /* taylorUITests */,
 				007C48322410B55D004C2C02 /* Products */,
+				AD14FE9E658DA9C8897BE9C8 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +112,7 @@
 			children = (
 				007C48342410B55D004C2C02 /* AppDelegate.swift */,
 				007C48362410B55D004C2C02 /* SceneDelegate.swift */,
+				00EAAB9A2414A77F00B59C4E /* Model */,
 				007C487E24119CD7004C2C02 /* Service */,
 				007C487B24119B4D004C2C02 /* ViewModels */,
 				007C487A24119B36004C2C02 /* Views */,
@@ -167,6 +173,22 @@
 				007C487F24119D7C004C2C02 /* DataService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		00EAAB9A2414A77F00B59C4E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				00EAAB9B2414A79300B59C4E /* ItunesAlbum.swift */,
+				006B91C124170C21003BCBBA /* ItunesAlbumResult.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AD14FE9E658DA9C8897BE9C8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,9 +324,11 @@
 			files = (
 				007C48352410B55D004C2C02 /* AppDelegate.swift in Sources */,
 				007C48652410BC5C004C2C02 /* AlbumDetailView.swift in Sources */,
+				006B91C224170C21003BCBBA /* ItunesAlbumResult.swift in Sources */,
 				007C48372410B55D004C2C02 /* SceneDelegate.swift in Sources */,
 				007C488024119D7C004C2C02 /* DataService.swift in Sources */,
 				007C48392410B55D004C2C02 /* AlbumListView.swift in Sources */,
+				00EAAB9C2414A79300B59C4E /* ItunesAlbum.swift in Sources */,
 				007C487D24119B7A004C2C02 /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -553,7 +577,6 @@
 		007C48622410B560004C2C02 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D4AZFPLJ6G;
 				INFOPLIST_FILE = taylorUITests/Info.plist;
@@ -573,7 +596,6 @@
 		007C48632410B560004C2C02 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D4AZFPLJ6G;
 				INFOPLIST_FILE = taylorUITests/Info.plist;
