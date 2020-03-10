@@ -22,7 +22,7 @@ struct Album: Identifiable {
                 return nil
         }
         
-        self.name = name
+        self.name = name.capitalized
         self.date = itunesAlbum.releaseDate
         self.externalImageUrl = itunesAlbum.artworkUrl100
         if let collectionId = itunesAlbum.collectionId,
