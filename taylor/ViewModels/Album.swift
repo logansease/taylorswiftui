@@ -31,8 +31,22 @@ struct Album: Identifiable {
         }
     }
     
+    init(name: String, externalImageUrl: String? = nil, date: Date? = nil) {
+        self.name = name
+        self.externalImageUrl = externalImageUrl
+        self.date = date
+    }
+    
     var imageName: String {
         return name.lowercased().replacingOccurrences(of: " ", with: "")
+    }
+    
+    var dateString: String? {
+        guard let date = date else { return nil }
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        return dateFormatter.string(from: date)
     }
 }
 

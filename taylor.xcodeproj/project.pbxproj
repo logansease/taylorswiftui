@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,8 @@
 		007C487D24119B7A004C2C02 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C487C24119B7A004C2C02 /* Album.swift */; };
 		007C488024119D7C004C2C02 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C487F24119D7C004C2C02 /* DataService.swift */; };
 		00EAAB9C2414A79300B59C4E /* ItunesAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EAAB9B2414A79300B59C4E /* ItunesAlbum.swift */; };
+		00EEEC1524AFCB48009CA61E /* ImageUrlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEEC1424AFCB48009CA61E /* ImageUrlView.swift */; };
+		00EEEC1724AFCB87009CA61E /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEEC1624AFCB87009CA61E /* RemoteImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		007C487C24119B7A004C2C02 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		007C487F24119D7C004C2C02 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		00EAAB9B2414A79300B59C4E /* ItunesAlbum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesAlbum.swift; sourceTree = "<group>"; };
+		00EEEC1424AFCB48009CA61E /* ImageUrlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUrlView.swift; sourceTree = "<group>"; };
+		00EEEC1624AFCB87009CA61E /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,7 @@
 				00EAAB9A2414A77F00B59C4E /* Model */,
 				007C487E24119CD7004C2C02 /* Service */,
 				007C487B24119B4D004C2C02 /* ViewModels */,
+				00EEEC1324AFCB2E009CA61E /* UI Components */,
 				007C487A24119B36004C2C02 /* Views */,
 				007C483A2410B55F004C2C02 /* Assets.xcassets */,
 				007C483F2410B55F004C2C02 /* LaunchScreen.storyboard */,
@@ -180,8 +185,17 @@
 			children = (
 				00EAAB9B2414A79300B59C4E /* ItunesAlbum.swift */,
 				006B91C124170C21003BCBBA /* ItunesAlbumResult.swift */,
+				00EEEC1624AFCB87009CA61E /* RemoteImage.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		00EEEC1324AFCB2E009CA61E /* UI Components */ = {
+			isa = PBXGroup;
+			children = (
+				00EEEC1424AFCB48009CA61E /* ImageUrlView.swift */,
+			);
+			path = "UI Components";
 			sourceTree = "<group>";
 		};
 		AD14FE9E658DA9C8897BE9C8 /* Pods */ = {
@@ -324,6 +338,8 @@
 			files = (
 				007C48352410B55D004C2C02 /* AppDelegate.swift in Sources */,
 				007C48652410BC5C004C2C02 /* AlbumDetailView.swift in Sources */,
+				00EEEC1524AFCB48009CA61E /* ImageUrlView.swift in Sources */,
+				00EEEC1724AFCB87009CA61E /* RemoteImage.swift in Sources */,
 				006B91C224170C21003BCBBA /* ItunesAlbumResult.swift in Sources */,
 				007C48372410B55D004C2C02 /* SceneDelegate.swift in Sources */,
 				007C488024119D7C004C2C02 /* DataService.swift in Sources */,
