@@ -7,10 +7,12 @@
 //
 
 import SwiftUI
+import SafariServices
 
 struct AlbumDetailView: View {
     
     @State var album: Album
+    @State var showSafari = false
     
     var body: some View {
         ZStack(alignment: .center) {
@@ -18,10 +20,10 @@ struct AlbumDetailView: View {
                 .resizable()
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
-                .blur(radius: 30)
-                .opacity(0.7)
+                .blur(radius: 20)
+                .opacity(0.8)
             
-            ImageUrlView(url: album.externalImageUrl, defaultImage: UIImage(named: "cat"))
+            ImageUrlView(url: album.externalImageUrlEnlarged, defaultImage: nil)
                 .aspectRatio(contentMode: .fit)
 
             VStack() {
@@ -36,6 +38,19 @@ struct AlbumDetailView: View {
                             Text(album.dateString!)
                                 .font(.callout)
                                 .padding(6)
+                        }
+                        
+                        if self.album.externalLink != nil {
+                            Button(action: {
+                                self.showSafari = true
+                            }) {
+                                Text("See More  >")
+                                    .foregroundColor(.yellow)
+                            }
+                            // summon the Safari sheet
+                            .sheet(isPresented: $showSafari) {
+                                SafariView(url:URL(string: self.album.externalLink!)!)
+                            }
                         }
                     }
                     Spacer()

@@ -14,6 +14,7 @@ struct Album: Identifiable {
     var name: String
     var externalImageUrl: String?
     var date: Date?
+    var externalLink: String?
     
     init?(itunesAlbum: ItunesAlbum) {
         guard itunesAlbum.collectionType == "Album",
@@ -25,6 +26,7 @@ struct Album: Identifiable {
         self.name = name.capitalized
         self.date = itunesAlbum.releaseDate
         self.externalImageUrl = itunesAlbum.artworkUrl100
+        self.externalLink = itunesAlbum.collectionViewUrl
 
         if let collectionId = itunesAlbum.collectionId {
             self.id = "\(collectionId)"
@@ -47,6 +49,10 @@ struct Album: Identifiable {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
         return dateFormatter.string(from: date)
+    }
+    
+    var externalImageUrlEnlarged: String? {
+        externalImageUrl?.replacingOccurrences(of: "100x100", with: "1000x1000")
     }
 }
 

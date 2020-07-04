@@ -14,9 +14,18 @@ struct AlbumListView: View {
     
     var body: some View {
         NavigationView {
+            
             List(dataService.albums) { album in
                 NavigationLink(destination: AlbumDetailView(album: album) ) {
-                    Text(album.name)
+                    HStack {
+                        ImageUrlView(url: album.externalImageUrl, defaultImage: nil)
+                        .aspectRatio(contentMode: .fit)
+                            .frame(width: 60, height: 60)
+                            .cornerRadius(30)
+                        
+                        Text(album.name)
+                    }
+                    
                 }
             }
         }

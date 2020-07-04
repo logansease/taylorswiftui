@@ -11,7 +11,7 @@ import UIKit
 
 struct ImageUrlView: View {
     @ObservedObject var remoteImageModel: RemoteImage
-    static let blankImage = Image(systemName: "slowmo").resizable()
+    static let blankImage = Image(systemName: "slowmo")
 
     init(url: String?, defaultImage: UIImage?) {
         remoteImageModel = RemoteImage(imageUrl: url, defaultImage: defaultImage)

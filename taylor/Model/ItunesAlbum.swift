@@ -14,6 +14,7 @@ struct ItunesAlbum: Codable {
     var collectionName: String?
     var artistName: String?
     var artistViewUrl: String?
+    var collectionViewUrl: String?
     var artworkUrl60: String?
     var artworkUrl100: String?
     var releaseDate: Date?
