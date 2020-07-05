@@ -18,7 +18,8 @@ We replace our hardcoded images with album artwork loaded from the network retur
 This is done by utilizing a new RemoteImage view.
 
 ### 04 - UI Clean Up
-Let's make this app look a bit better shall we? Today, we fix scaling issues on pixelated images, add thumbnails to the list view and add a link to the apple music url to listen to songs. The app is starting to be functional!
+Let's make this app look a bit better shall we? Today, we fix scaling issues on pixelated images, add thumbnails to the list view and add a link to the apple music url to listen to songs via a new SafariView. 
+The app is starting to become functional!
 
 ## Author
 
