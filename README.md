@@ -9,6 +9,7 @@ Each branch in this repo shall move us closer to our goal of an amazing project,
 In my first day on Taylor SwiftUI, I write my very first SwiftUI code, creating a simple list -> detail view that displays a list of albums which then takes us into a detail view of the album with a simple full screen image of art work.
 A new view model struct called Album is created to contain our basic album info and a DataService is established and bound to our ListView to load the data.
 All Data is hard coded.
+https://github.com/logansease/taylorswiftui/tree/01-the-basics
 
 ### 02- Dynamic Data Load
 Day Two- we load album data dynamically from the itunes api. We create a new data store to serve as the model and observe that model in our list view to propogate it through our views. 
