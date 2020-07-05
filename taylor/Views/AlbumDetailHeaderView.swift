@@ -33,22 +33,21 @@ struct AlbumDetailHeaderView: View {
                             self.showingAppleMusic = true
                         }) {
                             Text("See More  >")
-                                .foregroundColor(.yellow)
+                                .foregroundColor(Color("lipstickRed"))
                         }
-                        // show the external link
+                        // show the album in apple music
                         .sheet(isPresented: $showingAppleMusic) {
                             SafariView(url:URL(string: self.album.appleMusicLink!)!)
                         }
                     }
                 }
+                
                 Spacer()
-            }.background(Color.black)
-            .opacity(0.8)
+            }
+            .background(Color(white: 0, opacity: 0.4))
             .cornerRadius(10.0)
             .padding(6)
             .foregroundColor(.white)
-            
-             Spacer()
         }
     }
 }

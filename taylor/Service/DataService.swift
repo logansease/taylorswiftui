@@ -13,6 +13,7 @@ class DataService: ObservableObject  {
     lazy var jsonDecoder = JSONDecoder()
     
     @Published var albums: [Album] = []
+    @Published var songsByAlbum: [String: [Song]] = [:]
     
     class var shared: DataService {
         struct Singleton {
@@ -41,6 +42,25 @@ class DataService: ObservableObject  {
                 }
             }
             
+        }.resume()
+    }
+    
+    func loadSongs(for album: Album)
+    {
+        guard let url = URL(string: "https://itunes.apple.com/lookup?id=\(album.id)&entity=song") else {
+            return
+        }
+               
+        let request = URLRequest(url: url)
+        URLSession.shared.dataTask(with: request) { data, response, error in
+           if let data = data,
+               let decodedResponse = try? self.jsonDecoder.decode(ItunesSongsResult.self, from: data)
+           {
+               DispatchQueue.main.async {
+                    let songs = decodedResponse.results.toSongs()
+                    self.songsByAlbum[album.id] = songs
+               }
+           }
         }.resume()
     }
     

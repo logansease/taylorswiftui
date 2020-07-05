@@ -8,6 +8,11 @@
 
 import Foundation
 
+struct ItunesAlbumResult: Codable {
+    var results: [ItunesAlbum]
+}
+
+
 struct ItunesAlbum: Codable {
     var wrapperType: String?
     var collectionType: String?
@@ -25,6 +30,7 @@ struct ItunesAlbum: Codable {
 }
 
 // MARK: Array Helpers
+
 // The below is some hackery so that we can extend an array of ItunesAlbums
 protocol ItunesAlbumProtocol {
     associatedtype GenericType
