@@ -29,7 +29,7 @@ struct Album: Identifiable {
         self.appleMusicLink = itunesAlbum.collectionViewUrl
 
         if let collectionId = itunesAlbum.collectionId {
-            self.id = "\(collectionId)"
+            self.id = String(format: "%.0f", collectionId)
         }
     }
     
