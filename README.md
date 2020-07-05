@@ -11,6 +11,9 @@ A new view model struct called Album is created to contain our basic album info 
 Currently everything is hard coded.
 Next up... loading from the itunes connect api??
 
+### Current UI State
+
+<img src="https://user-images.githubusercontent.com/1085547/86537293-23161400-bebc-11ea-9171-8c945c76c99a.png" data-canonical-src="https://user-images.githubusercontent.com/1085547/86537293-23161400-bebc-11ea-9171-8c945c76c99a.png" width="300"/>
 
 ## Author
 
