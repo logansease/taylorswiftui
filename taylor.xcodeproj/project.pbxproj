@@ -45,7 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		007C48312410B55D004C2C02 /* taylor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = taylor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		007C48312410B55D004C2C02 /* T. SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "T. SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		007C48342410B55D004C2C02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		007C48362410B55D004C2C02 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		007C48382410B55D004C2C02 /* AlbumListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListView.swift; sourceTree = "<group>"; };
@@ -110,7 +110,7 @@
 		007C48322410B55D004C2C02 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				007C48312410B55D004C2C02 /* taylor.app */,
+				007C48312410B55D004C2C02 /* T. SwiftUI.app */,
 				007C48472410B55F004C2C02 /* taylorTests.xctest */,
 				007C48522410B560004C2C02 /* taylorUITests.xctest */,
 			);
@@ -122,6 +122,7 @@
 			children = (
 				007C48342410B55D004C2C02 /* AppDelegate.swift */,
 				007C48362410B55D004C2C02 /* SceneDelegate.swift */,
+				00BFA8A024B255990083D3BB /* Extensions */,
 				00EAAB9A2414A77F00B59C4E /* Model */,
 				007C487E24119CD7004C2C02 /* Service */,
 				007C487B24119B4D004C2C02 /* ViewModels */,
@@ -188,6 +189,13 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		00BFA8A024B255990083D3BB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		00EAAB9A2414A77F00B59C4E /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,7 +241,7 @@
 			packageProductDependencies = (
 			);
 			productName = taylor;
-			productReference = 007C48312410B55D004C2C02 /* taylor.app */;
+			productReference = 007C48312410B55D004C2C02 /* T. SwiftUI.app */;
 			productType = "com.apple.product-type.application";
 		};
 		007C48462410B55F004C2C02 /* taylorTests */ = {
@@ -526,7 +534,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"taylor/Preview Content\"";
 				DEVELOPMENT_TEAM = D4AZFPLJ6G;
 				ENABLE_PREVIEWS = YES;
@@ -535,10 +545,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.phraseparty.taylor;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iparty.tswiftui;
+				PRODUCT_NAME = "T. SwiftUI";
+				PROVISIONING_PROFILE_SPECIFIER = tswiftuidev;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -546,7 +557,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"taylor/Preview Content\"";
 				DEVELOPMENT_TEAM = D4AZFPLJ6G;
 				ENABLE_PREVIEWS = YES;
@@ -555,10 +568,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.phraseparty.taylor;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iparty.tswiftui;
+				PRODUCT_NAME = "T. SwiftUI";
+				PROVISIONING_PROFILE_SPECIFIER = "tswiftui-dist";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
