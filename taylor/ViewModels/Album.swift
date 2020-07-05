@@ -14,7 +14,7 @@ struct Album: Identifiable {
     var name: String
     var externalImageUrl: String?
     var date: Date?
-    var externalLink: String?
+    var appleMusicLink: String?
     
     init?(itunesAlbum: ItunesAlbum) {
         guard itunesAlbum.collectionType == "Album",
@@ -26,18 +26,18 @@ struct Album: Identifiable {
         self.name = name.capitalized
         self.date = itunesAlbum.releaseDate
         self.externalImageUrl = itunesAlbum.artworkUrl100
-        self.externalLink = itunesAlbum.collectionViewUrl
+        self.appleMusicLink = itunesAlbum.collectionViewUrl
 
         if let collectionId = itunesAlbum.collectionId {
             self.id = "\(collectionId)"
         }
     }
     
-    init(name: String, externalImageUrl: String? = nil, date: Date? = nil, externalLink: String? = nil) {
+    init(name: String, externalImageUrl: String? = nil, date: Date? = nil, appleMusicLink: String? = nil) {
         self.name = name
         self.externalImageUrl = externalImageUrl
         self.date = date
-        self.externalLink = externalLink
+        self.appleMusicLink = appleMusicLink
     }
     
     var imageName: String {
