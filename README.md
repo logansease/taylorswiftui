@@ -30,8 +30,8 @@ The list screen gets a new section header and the UI is improved on the detail p
 https://github.com/logansease/taylorswiftui/pull/5
 
 
-![Simulator Screen Shot - iPhone 11 - 2020-07-05 at 12 30 53](https://user-images.githubusercontent.com/1085547/86537332-66708280-bebc-11ea-876e-0cdda2a5c92a.png)
-![Simulator Screen Shot - iPhone 11 - 2020-07-05 at 12 30 58](https://user-images.githubusercontent.com/1085547/86537335-68d2dc80-bebc-11ea-9dc6-668904e6871f.png)
+![Simulator Screen Shot - iPhone 11 - 2020-07-05 at 12 30 53](https://user-images.githubusercontent.com/1085547/86537332-66708280-bebc-11ea-876e-0cdda2a5c92a.png =250x)
+![Simulator Screen Shot - iPhone 11 - 2020-07-05 at 12 30 58](https://user-images.githubusercontent.com/1085547/86537335-68d2dc80-bebc-11ea-9dc6-668904e6871f.png =250x)
 
 
 
