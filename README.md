@@ -12,18 +12,22 @@ All Data is hard coded.
 
 ### 02- Dynamic Data Load
 Day Two- we load album data dynamically from the itunes api. We create a new data store to serve as the model and observe that model in our list view to propogate it through our views. 
+https://github.com/logansease/taylorswiftui/pull/1
 
 ### 03- Remote Image Loading
 We replace our hardcoded images with album artwork loaded from the network returned from the itunes api.
 This is done by utilizing a new RemoteImage view.
+https://github.com/logansease/taylorswiftui/pull/2
 
 ### 04 - UI Clean Up
 Let's make this app look a bit better shall we? Today, we fix scaling issues on pixelated images, add thumbnails to the list view and add a link to the apple music url to listen to songs via a new SafariView. 
 The app is starting to become functional!
+https://github.com/logansease/taylorswiftui/pull/3
 
 ### 05 - Song List
 Add a song listing to the detail page of each album, loaded from the itunes search api.
 The list screen gets a new section header and the UI is improved on the detail page.
+https://github.com/logansease/taylorswiftui/pull/4 
 
 ## Author
 
