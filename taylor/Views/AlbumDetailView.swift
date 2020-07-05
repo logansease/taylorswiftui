@@ -7,10 +7,12 @@
 //
 
 import SwiftUI
+import SafariServices
 
 struct AlbumDetailView: View {
     
     @State var album: Album
+    @State var showSafari = false
     
     var body: some View {
         ZStack(alignment: .center) {
@@ -18,35 +20,13 @@ struct AlbumDetailView: View {
                 .resizable()
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
-                .blur(radius: 30)
-                .opacity(0.7)
+                .blur(radius: 20)
+                .opacity(0.8)
             
-            ImageUrlView(url: album.externalImageUrl, defaultImage: UIImage(named: "cat"))
+            ImageUrlView(url: album.externalImageUrlEnlarged, defaultImage: nil)
                 .aspectRatio(contentMode: .fit)
 
-            VStack() {
-                HStack(alignment: .center){
-                    Spacer()
-                    VStack {
-                        Text(album.name)
-                            .font(.callout)
-                            .padding(6)
-                        
-                        if album.dateString != nil {
-                            Text(album.dateString!)
-                                .font(.callout)
-                                .padding(6)
-                        }
-                    }
-                    Spacer()
-                }.background(Color.black)
-                .opacity(0.8)
-                .cornerRadius(10.0)
-                .padding(6)
-                .foregroundColor(.white)
-                
-                Spacer()
-            }
+            AlbumDetailHeaderView(album: $album)
         }
         
     }
