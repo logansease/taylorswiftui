@@ -11,7 +11,7 @@ import SwiftUI
 struct AlbumDetailHeaderView: View {
     
     @Binding var album: Album
-    @State var showSafari = false
+    @State var showingAppleMusic = false
     
     var body: some View {
         VStack() {
@@ -28,16 +28,16 @@ struct AlbumDetailHeaderView: View {
                             .padding(6)
                     }
                     
-                    if self.album.externalLink != nil {
+                    if self.album.appleMusicLink != nil {
                         Button(action: {
-                            self.showSafari = true
+                            self.showingAppleMusic = true
                         }) {
                             Text("See More  >")
                                 .foregroundColor(.yellow)
                         }
-                        // summon the Safari sheet
-                        .sheet(isPresented: $showSafari) {
-                            SafariView(url:URL(string: self.album.externalLink!)!)
+                        // show the external link
+                        .sheet(isPresented: $showingAppleMusic) {
+                            SafariView(url:URL(string: self.album.appleMusicLink!)!)
                         }
                     }
                 }
@@ -55,7 +55,7 @@ struct AlbumDetailHeaderView: View {
 
 struct AlbumDetailHeaderView_Previews: PreviewProvider {
     
-    @State static var album = Album(name: "Fearless", date: Date(), externalLink: "https://google.com")
+    @State static var album = Album(name: "Fearless", date: Date(), appleMusicLink: "https://google.com")
     
     static var previews: some View {
         
