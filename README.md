@@ -29,9 +29,7 @@ Add a song listing to the detail page of each album, loaded from the itunes sear
 The list screen gets a new section header and the UI is improved on the detail page.
 https://github.com/logansease/taylorswiftui/pull/5
 
-<img src="https://user-images.githubusercontent.com/1085547/86537332-66708280-bebc-11ea-876e-0cdda2a5c92a.png" data-canonical-src="https://user-images.githubusercontent.com/1085547/86537332-66708280-bebc-11ea-876e-0cdda2a5c92a.png" width="300"/>
-
-<img src="https://user-images.githubusercontent.com/1085547/86537335-68d2dc80-bebc-11ea-9dc6-668904e6871f.png" data-canonical-src="https://user-images.githubusercontent.com/1085547/86537335-68d2dc80-bebc-11ea-9dc6-668904e6871f.png" width="300"/>
+<img src="https://user-images.githubusercontent.com/1085547/86537332-66708280-bebc-11ea-876e-0cdda2a5c92a.png" data-canonical-src="https://user-images.githubusercontent.com/1085547/86537332-66708280-bebc-11ea-876e-0cdda2a5c92a.png" width="300"/> <img src="https://user-images.githubusercontent.com/1085547/86537335-68d2dc80-bebc-11ea-9dc6-668904e6871f.png" data-canonical-src="https://user-images.githubusercontent.com/1085547/86537335-68d2dc80-bebc-11ea-9dc6-668904e6871f.png" width="300"/>
 
 
 
