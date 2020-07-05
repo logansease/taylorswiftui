@@ -11,7 +11,7 @@ A new view model struct called Album is created to contain our basic album info 
 All Data is hard coded.
 
 ### 02- Dynamic Data Load
-Day Two- we load album data dynamically from the itunes api. We create a new data store to serve as the model and 
+Day Two- we load album data dynamically from the itunes api. We create a new data store to serve as the model and observe that model in our list view to propogate it through our views. 
 
 ### 03- Remote Image Loading
 We replace our hardcoded images with album artwork loaded from the network returned from the itunes api.
