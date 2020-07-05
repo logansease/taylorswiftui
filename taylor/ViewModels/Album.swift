@@ -33,10 +33,11 @@ struct Album: Identifiable {
         }
     }
     
-    init(name: String, externalImageUrl: String? = nil, date: Date? = nil) {
+    init(name: String, externalImageUrl: String? = nil, date: Date? = nil, externalLink: String? = nil) {
         self.name = name
         self.externalImageUrl = externalImageUrl
         self.date = date
+        self.externalLink = externalLink
     }
     
     var imageName: String {
