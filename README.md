@@ -21,6 +21,10 @@ This is done by utilizing a new RemoteImage view.
 Let's make this app look a bit better shall we? Today, we fix scaling issues on pixelated images, add thumbnails to the list view and add a link to the apple music url to listen to songs via a new SafariView. 
 The app is starting to become functional!
 
+### 05 - Song List
+Add a song listing to the detail page of each album, loaded from the itunes search api.
+The list screen gets a new section header and the UI is improved on the detail page.
+
 ## Author
 
 Logan Sease, lsease@gmail.com
